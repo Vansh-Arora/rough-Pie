@@ -3,3 +3,4 @@ print(sorted(ans))
 r = [ 1,2,4,3]
 print(sorted(r))
 print(ans.values())
+print(ans.keys())
