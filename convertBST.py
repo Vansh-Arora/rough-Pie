@@ -8,15 +8,12 @@ class Solution:
     def convertBST(self, root: TreeNode) -> TreeNode:
         if root.right != None:
             (self.convertBST(root.right))
-            if root.right.val > self.temp:
-                root.val = self.temp + root.val
-            else:
-                root.val = root.right.val + root.val
-
+            root.val = root.right.val + root.val
+            print(root.val)
         if root.left != None:
             root.left.val = root.val + root.left.val
             (self.convertBST(root.left))
         if root.left == None and root.right == None :
             print(root)
-
+            return root
         return root
