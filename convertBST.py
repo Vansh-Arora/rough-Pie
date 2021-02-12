@@ -5,15 +5,16 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    def __init__(self):
+        self.sum = 0
+    def convert(self, root: TreeNode) -> TreeNode:
+        print(self.sum)
+        if root == None:
+            return
+        self.convert(root.right)
+        self.sum = self.sum + root.val
+        root.val = self.sum
+        self.convert(root.left)
     def convertBST(self, root: TreeNode) -> TreeNode:
-        if root.right != None:
-            (self.convertBST(root.right))
-            root.val = root.right.val + root.val
-            print(root.val)
-        if root.left != None:
-            root.left.val = root.val + root.left.val
-            (self.convertBST(root.left))
-        if root.left == None and root.right == None :
-            print(root)
-            return root
+        self.convert(root)
         return root
