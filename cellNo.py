@@ -9,5 +9,5 @@ class Solution:
             toPlaceValue -= 1
         return ans
 A = Solution()
-a = A.titleToNumber('BB')
+a = A.titleToNumber('UI')
 print(a)
