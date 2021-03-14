@@ -11,8 +11,6 @@ class Solution:
                 alpha[ord(i)-97] += 1
 
             else:
-                if alpha[ord(i)-97] == 1:
-                    que.remove(i)
                 alpha[ord(i)-97] += 1
                 
 
