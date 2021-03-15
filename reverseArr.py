@@ -6,7 +6,10 @@ class Solution:
     def arrange(self, A):
         n = len(A)
         for i in range(n):
-            A[i] += (A[A[i]]%n)*n
+            if i == 3:
+                print(A[i])
+                print(1,A[A[i]],sep='   ')
+            A[i] += (A[A[i]])*n
         for i in range(n):
             A[i] = A[i]//n
 
@@ -17,3 +20,4 @@ x = input().split()
 x = [int(i) for i in x]
 a = A.arrange(x)
 print(x)
+print(0%5)
