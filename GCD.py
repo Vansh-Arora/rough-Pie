@@ -11,3 +11,7 @@ class Solution:
             return B
         else:
             return self.gcd(B,A%B)
+
+a = Solution()
+b = a.gcd(2016,2448)
+print(b)
