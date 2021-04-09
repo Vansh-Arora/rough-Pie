@@ -1,0 +1,13 @@
+Event Id,Last Time,Rule Message,Subcategory,Event Count,Source IP,Source Port,Destination IP,Destination Port,URL,Protocol,Event Subtype,Severity,Average Severity
+144125084066381824|57824693052,02/28/2021 07:56:35,CS_OutBound_NTP_Attack Event Detected,A,1,10.2.1.1,http,189.0.1.1,3677,http://49.40.22.81/public/.env,tcp,alert,25,25
+144125084066381824|57824693051,02/28/2021 07:56:34,CS_OutBound_NTP_Attack Event Detected,B,1,10.2.3.1.,http,120.0.0.1 ,1887,http://49.40.22.81/storage/.env,tcp,alert,25,25
+144125084066381824|57824693050,02/28/2021 07:56:34,CS_OutBound_NTP_Attack Event Detected,C,1,10.2.3.4,http,12.0.0.1,14341,http://49.40.22.81/vendor/.env,tcp,alert,25,25
+144125084066381824|57824693049,02/28/2021 07:56:33,CS_OutBound_NTP_Attack Event Detected,D,1,10.98.2.0,http,180.252.52.178,20930,http://49.40.22.81/.env,tcp,alert,25,25
+144125084066381824|57817470840,02/28/2021 07:40:06,CS_InBound_NTP_Attack Event Detected,E,1,172.16.0.1,54506,10.0.0.1,0,,tcp,alert,25,25
+144125084066381824|57817470829,02/28/2021 07:40:06,CS_InBound_NTP_Attack Event Detected,F,1,192.168.0.1,56254,10.2.2.1,0,,tcp,alert,25,25
+144125084066381824|57817470828,02/28/2021 07:40:06,CS_InBound_NTP_Attack Event Detected,G,1,10.2.1.1,58304,172.16.7.8,0,,tcp,alert,25,25
+144125084066381824|57818239942,02/28/2021 06:26:47,CS_InBound_NTP_Attack Event Detected,H,1,45.133.1.133,38628,10.135.140.146,0,http:///1.1,tcp,alert,25,25
+144125084066381824|57815486892,02/28/2021 05:15:53,CS_OutBound_NTP_Attack Event Detected,I,1,10.0.0.1 ,http,12.0.0.1,26879,http://49.40.2.120/.env,tcp,alert,25,25
+144125084066381824|57813978278,02/28/2021 05:08:59,CS_InBound_NTP_Attack Event Detected,J,1,12.0.0.1,http,10.0.0.1 ,37472,http://49.40.26.149/portal/redlion,tcp,alert,25,25
+144125084066381824|57818239942,02/28/2021 06:26:47,CS_InBound_NTP_Attack Event Detected,H,1,44.0.0.1,38628,10.0.22.1,0,http:///1.1,tcp,alert,25,25
+144125084066381824|57818239942,02/28/2021 06:26:47,CS_InBound_NTP_Attack Event Detected,H,1,45.133.1.133,38628,192.168.0.1 ,0,http:///1.1,tcp,alert,25,25
