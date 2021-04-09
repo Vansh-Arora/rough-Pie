@@ -22,6 +22,7 @@ with open("F:\\rough-Pie\\ip_split\\data.csv") as ips, open("F:\\rough-Pie\\ip_s
             writer.writeheader()
             writer2 = csv.DictWriter(ips2,fieldnames=keys)
             writer2.writeheader()
+        
         if 'OutBound' in row["Rule Message"]:
             row["Source IP"],row["Destination IP"] = row["Destination IP"],row["Source IP"]
         src = row["Source IP"].split('.')
