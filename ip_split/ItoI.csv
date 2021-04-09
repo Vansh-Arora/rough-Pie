@@ -1,0 +1,4 @@
+Event Id,Last Time,Rule Message,Subcategory,Event Count,Source IP,Source Port,Destination IP,Destination Port,URL,Protocol,Event Subtype,Severity,Average Severity
+144125084066381824|57817470840,02/28/2021 07:40:06,CS_InBound_NTP_Attack Event Detected,E,1,172.16.0.1,54506,10.0.0.1,0,,tcp,alert,25,25
+144125084066381824|57817470829,02/28/2021 07:40:06,CS_InBound_NTP_Attack Event Detected,F,1,192.168.0.1,56254,10.2.2.1,0,,tcp,alert,25,25
+144125084066381824|57817470828,02/28/2021 07:40:06,CS_InBound_NTP_Attack Event Detected,G,1,10.2.1.1,58304,172.16.7.8,0,,tcp,alert,25,25
