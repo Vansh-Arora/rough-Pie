@@ -10,7 +10,7 @@ def check_range(A):
     else:
         return False
 
-with open("F:\\rough-Pie\\ip_split\\data.csv") as ips, open("F:\\rough-Pie\\ip_split\\ItoI.csv","w") as ips1, open("F:\\rough-Pie\\ip_split\\EtoI.csv","w") as ips2:
+with open("F:\\rough-Pie\\ip_split\\Data_Set.csv") as ips, open("F:\\rough-Pie\\ip_split\\ItoI.csv","w") as ips1, open("F:\\rough-Pie\\ip_split\\EtoI.csv","w") as ips2:
     i = 1 # flag for header
     
     reader = csv.DictReader(ips)
