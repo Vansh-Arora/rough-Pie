@@ -4,6 +4,8 @@ def bubbleSort(A):
         for j in range(n-i-1):
             if A[j] > A[j+1]:
                 A[j+1],A[j] = A[j],A[j+1]
-arr = [2,3,4,56,7,1,8,12]
+
+arr = input().split()
+arr = [int(i) for i in arr]
 bubbleSort(arr)
 print(arr)
