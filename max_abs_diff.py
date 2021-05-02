@@ -14,4 +14,4 @@ class Solution:
                 
                 
 A = Solution()
-print(A.maxArr([1, 3, -1]))
+print(A.maxArr([1, 3, -1,25,10,36]))
