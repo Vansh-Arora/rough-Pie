@@ -13,3 +13,5 @@ class Solution:
         return ans
                 
                 
+A = Solution()
+print(A.maxArr([1, 3, -1]))
