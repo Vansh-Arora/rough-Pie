@@ -24,17 +24,24 @@ def inOrder(node):
 
 
 ## Calculate height of tree
-height = 0
-def getHeight(node):
-    global height
+#height = 0
+def getHeight(node,height):
+    #global height
     if node == None:
         return height
-    leftHt = getHeight(node.left)
-    rightHt = getHeight(node.right)
+    leftHt = getHeight(node.left,height)
+    rightHt = getHeight(node.right,height)
     height =  max(leftHt,rightHt)
     return height + 1
 
-
+def getDiameter(node):
+    if node ==  None:
+        return 0
+    leftDim = getDiameter(node.left)
+    rightDim = getDiameter(node.right)
+    #print(leftDim,rightDim,(getHeight(node.left)+ getHeight(node.right) +1))
+    return max(leftDim,rightDim,(getHeight(node.left,0)+ getHeight(node.right,0) +1))
 if __name__ == "__main__":
     root = build()
-    print(getHeight(root))
+    print(getHeight(root,0))
+    print(getDiameter(root))
