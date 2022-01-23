@@ -41,7 +41,19 @@ def getDiameter(node):
     rightDim = getDiameter(node.right)
     #print(leftDim,rightDim,(getHeight(node.left)+ getHeight(node.right) +1))
     return max(leftDim,rightDim,(getHeight(node.left,0)+ getHeight(node.right,0) +1))
+count = 0
+def countLeaves(node):
+    global count
+    if node == None:
+        return count
+    if node.left == None and node.right == None:
+        count+=1
+        return count
+    countLeaves(node.left)
+    countLeaves(node.right)
+    return count
 if __name__ == "__main__":
     root = build()
     print(getHeight(root,0))
     print(getDiameter(root))
+    print(countLeaves(root))
