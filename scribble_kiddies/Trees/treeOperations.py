@@ -1,3 +1,6 @@
+from platform import node
+
+
 class Node:
     def __init__(self,data) -> None:
         self.left = None
@@ -34,6 +37,8 @@ def getHeight(node,height):
     height =  max(leftHt,rightHt)
     return height + 1
 
+## Function to get diameter of tree
+
 def getDiameter(node):
     if node ==  None:
         return 0
@@ -41,19 +46,32 @@ def getDiameter(node):
     rightDim = getDiameter(node.right)
     #print(leftDim,rightDim,(getHeight(node.left)+ getHeight(node.right) +1))
     return max(leftDim,rightDim,(getHeight(node.left,0)+ getHeight(node.right,0) +1))
-count = 0
+
+
+leafNodes = 0
 def countLeaves(node):
-    global count
+    global leafNodes
     if node == None:
-        return count
+        return leafNodes
     if node.left == None and node.right == None:
-        count+=1
-        return count
+        leafNodes+=1
+        return leafNodes
     countLeaves(node.left)
     countLeaves(node.right)
-    return count
+    return leafNodes
+
+numOfNodes = 0
+def countNodes(node):
+    global numOfNodes
+    if node ==  None:
+        return numOfNodes
+    numOfNodes += 1
+    countNodes(node.left)
+    countNodes(node.right)
+    return numOfNodes
 if __name__ == "__main__":
     root = build()
     print(getHeight(root,0))
     print(getDiameter(root))
     print(countLeaves(root))
+    print(countNodes(root))
