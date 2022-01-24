@@ -1,3 +1,4 @@
+from collections import deque
 class Queue:
     def __init__(self):
         self.q = []
@@ -6,7 +7,6 @@ class Queue:
 
     def isEmpty(self):
         if self.rear == -1 or self.front>self.rear:
-            print("is empty")
             return True
         
         return False
@@ -117,23 +117,44 @@ def countNodes(node):
 Que = Queue()
 def traverse(node):
     Que.enQueue(node)
-    Que.enQueue(None)
+    #Que.enQueue(None)
     while not Que.isEmpty():
-        #print("here")
         curr = Que.deQueue()
+        '''
         if curr == None:
-           # print("HERE")
-           # print(Que.front,Que.rear)
             if Que.front >= Que.rear:
                 break
             Que.enQueue(None)
+        '''
+        #else:
+        print(curr.data)
+        if curr.left:
+            Que.enQueue(curr.left)
+        if curr.right:
+            Que.enQueue(curr.right)
+
+
+## Function to take sum of nodes on a level
+sum = 0
+QueForSum = Queue()
+def levelSum(node):
+    global sum
+    QueForSum.enQueue(node)
+    QueForSum.enQueue(None)
+    while not QueForSum.isEmpty():
+        curr = QueForSum.deQueue()
+        if curr == None:
+            print(sum)
+            sum = 0
+            if QueForSum.front >= QueForSum.rear:
+                break
+            QueForSum.enQueue(None)
         else:
-            print(curr.data)
+            sum += curr.data
             if curr.left:
-                Que.enQueue(curr.left)
+                QueForSum.enQueue(curr.left)
             if curr.right:
-                Que.enQueue(curr.right)
-        
+                QueForSum.enQueue(curr.right)  
 
 
 
@@ -145,4 +166,5 @@ if __name__ == "__main__":
     #print(getDiameter(root))
     #print(countLeaves(root))
     traverse(root)
+    levelSum(root)
     #print(countNodes(root))
