@@ -1,5 +1,36 @@
-from platform import node
+class Queue:
+    def __init__(self):
+        self.q = []
+        self.front = -1
+        self.rear = -1
 
+    def isEmpty(self):
+        if self.rear == -1 or self.front>self.rear:
+            print("is empty")
+            return True
+        
+        return False
+    
+    def enQueue(self,data):
+        if self.front == -1:
+            self.front += 1
+        self.rear += 1
+        self.q.append(data)
+    
+    def deQueue(self):
+        if self.front == -1 or self.front > self.rear:
+            return None
+        self.front += 1
+        return self.q[self.front - 1]
+    
+    def display(self):
+        i = self.front
+        while i<=self.rear:
+            if self.q[i] != None:
+                print(self.q[i].data)
+            else:
+                print(self.q[i])
+            i += 1
 
 class Node:
     def __init__(self,data) -> None:
@@ -82,11 +113,36 @@ def countNodes(node):
     return numOfNodes
 
 
+## Function to print level order traversal of a tree
+Que = Queue()
+def traverse(node):
+    Que.enQueue(node)
+    Que.enQueue(None)
+    while not Que.isEmpty():
+        #print("here")
+        curr = Que.deQueue()
+        if curr == None:
+           # print("HERE")
+           # print(Que.front,Que.rear)
+            if Que.front >= Que.rear:
+                break
+            Que.enQueue(None)
+        else:
+            print(curr.data)
+            if curr.left:
+                Que.enQueue(curr.left)
+            if curr.right:
+                Que.enQueue(curr.right)
+        
+
+
+
 
 # Main 
 if __name__ == "__main__":
     root = build()
-    print(getHeight(root,0))
-    print(getDiameter(root))
-    print(countLeaves(root))
-    print(countNodes(root))
+    #print(getHeight(root,0))
+    #print(getDiameter(root))
+    #print(countLeaves(root))
+    traverse(root)
+    #print(countNodes(root))
