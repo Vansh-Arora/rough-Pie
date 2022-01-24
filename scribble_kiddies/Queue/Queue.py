@@ -5,7 +5,7 @@ class Queue:
         self.rear = -1
 
     def isEmpty(self):
-        if self.rear == -1:
+        if self.rear == -1 or self.front>self.rear:
             return True
         return False
     
