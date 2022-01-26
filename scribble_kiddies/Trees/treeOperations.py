@@ -1,4 +1,3 @@
-from collections import deque
 class Queue:
     def __init__(self):
         self.q = []
@@ -23,6 +22,12 @@ class Queue:
         self.front += 1
         return self.q[self.front - 1]
     
+    def peek(self):
+        if self.front == -1 or self.front > self.rear:
+            return None
+        #self.front += 1
+        return self.q[self.front]
+
     def display(self):
         i = self.front
         while i<=self.rear:
@@ -117,21 +122,20 @@ def countNodes(node):
 Que = Queue()
 def traverse(node):
     Que.enQueue(node)
-    #Que.enQueue(None)
+    Que.enQueue(None)
     while not Que.isEmpty():
         curr = Que.deQueue()
-        '''
         if curr == None:
             if Que.front >= Que.rear:
                 break
             Que.enQueue(None)
-        '''
-        #else:
-        print(curr.data)
-        if curr.left:
-            Que.enQueue(curr.left)
-        if curr.right:
-            Que.enQueue(curr.right)
+
+        else:
+            print(curr.data)
+            if curr.left:
+                Que.enQueue(curr.left)
+            if curr.right:
+                Que.enQueue(curr.right)
 
 
 ## Function to take sum of nodes on a level
@@ -157,6 +161,46 @@ def levelSum(node):
                 QueForSum.enQueue(curr.right)  
 
 
+## Function to print left view of a tree
+
+def leftView(node):
+    if node == None:
+        return
+    traverse(node)
+    Que.front = 0
+    curr = Que.deQueue()
+    print(curr.data)
+    i = Que.front
+    curr = Que.deQueue()
+    while i < Que.rear:
+        if curr == None:
+            curr = Que.deQueue()
+            i += 1
+            print(curr.data)
+            continue
+        else:
+            curr = Que.deQueue()
+            i += 1
+
+def rightView(node):
+    if node == None:
+        return
+    traverse(node)
+    Que.front = 0
+    i = 1
+    curr = Que.deQueue()
+    while i <= Que.rear:
+        if Que.peek() == None:
+            print(curr.data)
+            curr = Que.deQueue()
+            i += 1
+        else:
+            curr = Que.deQueue()
+            i += 1
+
+        
+
+
 
 
 # Main 
@@ -165,6 +209,8 @@ if __name__ == "__main__":
     #print(getHeight(root,0))
     #print(getDiameter(root))
     #print(countLeaves(root))
-    traverse(root)
-    levelSum(root)
+    #traverse(root)
+    #levelSum(root)
     #print(countNodes(root))
+    #leftView(root)
+    rightView(root)
