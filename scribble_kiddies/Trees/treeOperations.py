@@ -181,7 +181,21 @@ def leftView(node):
             curr = Que.deQueue()
             i += 1
 
-        
+def rightView(node):
+    if node == None:
+        return
+    traverse(node)
+    Que.front = 0
+    i = 1
+    curr = Que.deQueue()
+    while i <= Que.rear:
+        if Que.peek() == None:
+            print(curr.data)
+            curr = Que.deQueue()
+            i += 1
+        else:
+            curr = Que.deQueue()
+            i += 1
 
 
 
