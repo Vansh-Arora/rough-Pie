@@ -25,7 +25,6 @@ class Queue:
     def peek(self):
         if self.front == -1 or self.front > self.rear:
             return None
-        #self.front += 1
         return self.q[self.front]
 
     def display(self):
@@ -181,6 +180,7 @@ def leftView(node):
             curr = Que.deQueue()
             i += 1
 
+## Function to print right view of a tree
 def rightView(node):
     if node == None:
         return
@@ -205,7 +205,7 @@ if __name__ == "__main__":
     root = build()
     #print(getHeight(root,0))
     #print(getDiameter(root))
-    #print(countLeaves(root))
+    print(countLeaves(root))
     #traverse(root)
     #levelSum(root)
     #print(countNodes(root))
