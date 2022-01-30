@@ -203,7 +203,7 @@ def rightView(node):
 # Main 
 if __name__ == "__main__":
     root = build()
-    #print(getHeight(root,0))
+    print(getHeight(root,0))
     #print(getDiameter(root))
     print(countLeaves(root))
     #traverse(root)
