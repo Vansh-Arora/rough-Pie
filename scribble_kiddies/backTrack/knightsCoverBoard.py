@@ -38,9 +38,9 @@ def helper(i,j,n,G,visited,count):
 
 
 
-def cover(i,j,n):
+def cover(n):
     G = createGrid(n)
     visited = createGrid(n)
-    helper(i,j,n,G,visited,0)
+    helper(0,0,n,G,visited,0)
 
-cover(0,0,5)
+cover(5)
