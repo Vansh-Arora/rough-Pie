@@ -6,6 +6,10 @@ def create(n):
             else:
                 print("*",end = "")
         print()
-
+def createInverterd(n):
+    for i in range(n):
+        for j in range(n-i):
+            print(n,end="")
+        print()
 
 create(5)
