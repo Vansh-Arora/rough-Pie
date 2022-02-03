@@ -15,7 +15,13 @@ def createGrid(n):
             G[i].append(0)
     return G
 
-
+def helper(i,j,n,G,visited,count):
+    if count == (n*n)-1:
+        G[i][j]=count
+        print(G)
+        return
+    if count >= n*n:
+        return
 
     visited[i][j]=1
     G[i][j]=count
