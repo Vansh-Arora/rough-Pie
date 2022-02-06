@@ -1,3 +1,5 @@
+# Linked List
+
 class singlyLinkedListNode:
     def __init__(self,data):
         self.next = None
@@ -15,6 +17,8 @@ class singlyLinkedList:
             self.tail.next = node
         self.tail = node
 
+
+## Create adjacency list
 def createList(nodes,edges):
     adjList = [None for i in range(nodes)]
     for i in range(nodes):
@@ -26,9 +30,9 @@ def createList(nodes,edges):
         adjList[node2].addNode(node1)
     return adjList
     
+## Print List
 def printList(adjList,nodes):
     for i in range(nodes):
-
         print(i,end="->")
         curr = adjList[i].head
         while curr:
@@ -37,5 +41,7 @@ def printList(adjList,nodes):
         print("X")
 
 if __name__ == "__main__":
-    adjList = createList(7,7)
+    nodes = int(input("Enter Number of Nodes: "))
+    edges = int(input("Enter Number of edges"))
+    adjList = createList(nodes,edges)
     printList(adjList,7)
