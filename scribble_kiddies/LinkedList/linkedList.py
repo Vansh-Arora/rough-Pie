@@ -14,9 +14,20 @@ class singlyLinkedList:
         else:
             self.tail.next = node
         self.tail = node
-        
+    
+    def createList(self,n):
+        for i in range(n):
+            self.addNode(int(input("Enter node data: ")))
 
+
+    def printList(self):
+        curr = A.head
+        while(curr):
+            print(curr.data,end='->')
+            curr = curr.next
+        print("X")
+        
 A = singlyLinkedList()
-A.addNode(5)
-print(A.head.data)
+A.createList(int(input("Enter size of list: ")))
+A.printList()
 
