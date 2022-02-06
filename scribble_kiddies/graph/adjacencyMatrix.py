@@ -23,6 +23,7 @@ def uAdjacencyMatrix(nodes,edges):
         MATRIX[int(node2)][int(node1)] = 1
     return MATRIX
 
+## Check for presence of an edge between two given nodes
 def checkEdge(MATRIX,nodeA,nodeB):
     if MATRIX[nodeA][nodeB]:
         return True
