@@ -23,7 +23,14 @@ def uAdjacencyMatrix(nodes,edges):
         MATRIX[int(node2)][int(node1)] = 1
     return MATRIX
 
-printMatrix(uAdjacencyMatrix(7,7),7)
+def checkEdge(MATRIX,nodeA,nodeB):
+    if MATRIX[nodeA][nodeB]:
+        return True
+    return False
+    
+M = uAdjacencyMatrix(7,7)
+print(checkEdge(M,1,4))
+printMatrix(M,7)
 
 
 
