@@ -92,6 +92,28 @@ def BFS(adjList):
                 Q.enQueue(curr.data)
             curr = curr.next
 
+def DFS(adjList):
+    ST = []
+    visited = [0 for i in range(len(adjList))]
+    visited[0] = 1
+    ST.append(0)
+    print(0,end = " ")
+    curr = adjList[0].head
+    while len(ST) != 0:
+        if curr and not visited[curr.data]:
+                ST.append(curr.data)
+                print(curr.data,end=" ")
+                visited[curr.data] = 1
+                curr = adjList[curr.data].head
+        else:
+            if curr.next:
+                curr = curr.next
+            else:
+                ST.pop()
+                if len(ST) > 0:
+                    curr = adjList[ST[-1]].head
+
+
 
 
     
@@ -103,3 +125,5 @@ if __name__ == "__main__":
     adjList = createList(nodes,edges)
     printList(adjList,7)
     BFS(adjList)
+    print()
+    DFS(adjList)
