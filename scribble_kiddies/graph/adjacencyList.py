@@ -1,5 +1,8 @@
 # Linked List
 
+from inspect import BlockFinder
+
+
 class singlyLinkedListNode:
     def __init__(self,data):
         self.next = None
@@ -74,12 +77,29 @@ def printList(adjList,nodes):
         print("X")
 
 # Breadth First Search
-#sdef BFS(adjList):
+def BFS(adjList):
+    Q = Queue()
+    Q.enQueue(0)
+    visited = [0 for i in range(len(adjList))]
+    visited[0] = 1
+    while not Q.isEmpty():
+        currNode = Q.deQueue()
+        print(currNode,end = " ")
+        curr = adjList[currNode].head
+        while curr:
+            if not visited[curr.data]:
+                visited[curr.data] = 1
+                Q.enQueue(curr.data)
+            curr = curr.next
+
+
+
     
 
 
 if __name__ == "__main__":
     nodes = int(input("Enter Number of Nodes: "))
-    edges = int(input("Enter Number of edges"))
+    edges = int(input("Enter Number of edges: "))
     adjList = createList(nodes,edges)
     printList(adjList,7)
+    BFS(adjList)
