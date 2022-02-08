@@ -1,8 +1,5 @@
 # Linked List
 
-from inspect import BlockFinder
-
-
 class singlyLinkedListNode:
     def __init__(self,data):
         self.next = None
