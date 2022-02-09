@@ -36,3 +36,11 @@ def printList(adjList,nodes):
             print(curr.data,end="->")
             curr = curr.next
         print("X")
+
+
+if __name__ == "__main__":
+    nodes = int(input("Enter Number of Nodes: "))
+    edges = int(input("Enter Number of edges: "))
+    adjList = createList(nodes,edges)
+    printList(adjList,7)
+    print()
