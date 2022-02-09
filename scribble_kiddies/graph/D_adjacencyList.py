@@ -27,3 +27,12 @@ def createList(nodes,edges):
         adjList[node1].addNode(node2)
     return adjList
 
+## Print List
+def printList(adjList,nodes):
+    for i in range(nodes):
+        print(i,end="->")
+        curr = adjList[i].head
+        while curr:
+            print(curr.data,end="->")
+            curr = curr.next
+        print("X")
