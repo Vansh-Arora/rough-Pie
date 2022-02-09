@@ -22,8 +22,8 @@ def createList(nodes,edges):
     for i in range(nodes):
          adjList[i] = singlyLinkedList()
     for i in range(edges):
-        node1 = int(input("Enter node A data: "))
-        node2 = int(input("Enter node B data: "))
+        node1 = int(input("Enter start node data: "))
+        node2 = int(input("Enter end node data: "))
         adjList[node1].addNode(node2)
-        adjList[node2].addNode(node1)
     return adjList
+
