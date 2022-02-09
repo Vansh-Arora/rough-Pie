@@ -1,5 +1,4 @@
 # Linked List
-
 class singlyLinkedListNode:
     def __init__(self,data):
         self.next = None
