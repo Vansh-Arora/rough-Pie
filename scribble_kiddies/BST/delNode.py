@@ -1,36 +1,28 @@
-#User function Template for python3
-inO = []
-def inOrder(root,key):
-    global inO
-    if root == None:
-        return root
-    if len(inO) != 0 and inO[-1].data == key:
-        return root
-    inO.append(root)
-    inOrder(root.right,key)
+def minVal(root,key):
+    curr = root
+    while curr.left:
+        curr = curr.left
+    return curr 
 #Function to delete a root from BST.
-def deleteroot(root, X):
+def deleteNode(root, X):
     # code here.
     
     if root == None:
-        return
+        return root
     if X > root.data:
-        deleteroot(root.right,X)
-    if X < root.data:
-        deleteroot(root.left,X)
+        root.right = deleteNode(root.right,X)
+    elif X < root.data:
+        root.left = deleteNode(root.left,X)
     else:
-        if root.left==None and root.right == None:
-            root = None
-            return
         if root.left == None:
-            root = root.right
-            root.right = None
-            return
-        if root.right == None:
-            root = root.left
-            root.left = None
-            return
-        delN = inOrder(root,X)
-        root.data = delN.data
-        deleteroot(root.right,delN.data)
+            temp = root.right
+            root = None
+            return temp
+        elif root.right == None:
+            temp = root.left
+            root = None
+            return temp
+        temp = minVal(root.right)
+        root.key = temp.key
+        root.right = deleteNode(root.right,temp.data)
         
