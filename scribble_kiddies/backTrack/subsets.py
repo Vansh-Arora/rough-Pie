@@ -5,7 +5,7 @@ class subsets:
             return
         ANS.append(A[i])
         self.generate(A,ANS,i+1,n)
-        #ANS.pop()
+        ANS.pop()
         self.generate(A,ANS,i+1,n)
 
 A = subsets()
