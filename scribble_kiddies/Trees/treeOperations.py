@@ -199,6 +199,27 @@ def rightView(node):
 
 
 
+def traverse2(root):
+    q = []
+    if root:
+        q.append(root)
+        q.append(None)
+        start = 0
+        end = 1
+    while q[start] != None or start < end:
+        cur = q[start]
+        start += 1
+        if cur == None:
+            q.append(None)
+            end += 1
+        if cur.left:
+            q.append(cur.left)
+            end += 1
+        if cur.right:
+            q.append(cur.right)
+            end += 1
+    print(q)
+            
 
 # Main 
 if __name__ == "__main__":
@@ -211,3 +232,4 @@ if __name__ == "__main__":
     #print(countNodes(root))
     #leftView(root)
     rightView(root)
+    traverse2(root)
