@@ -13,7 +13,7 @@ def DFS(adj,V):
         if visi[i] == 0:
             count += 1
             DFShelper(visi,adj,i,ans)
-    #print("Connected Components = {}".format(count))
+    print("Connected Components = {}".format(count))
 
 
 
