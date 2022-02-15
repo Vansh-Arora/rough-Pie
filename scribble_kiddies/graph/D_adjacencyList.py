@@ -74,7 +74,6 @@ def printList(adjList,nodes):
             curr = curr.next
         print("X")
 def TopologicalSort(adjList):
-    count = 0
     Q = Queue()
     for i in range(len(indeg)):
         if indeg[i] == 0:
