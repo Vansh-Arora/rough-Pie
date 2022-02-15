@@ -1,9 +1,9 @@
 def DFShelper(V,adj,node,ans):
-        V[node] = 1
-        ans.append(node)
-        for i in adj[node]:
-            if V[i] == 0:
-                DFShelper(V,adj,i)
+    V[node] = 1
+    ans.append(node)
+    for i in adj[node]:
+        if V[i] == 0:
+            DFShelper(V,adj,i)
 
 def DFS(adj,V):
     visi = [0 for i in range(V)]
