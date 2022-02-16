@@ -13,7 +13,6 @@ def DFS(V,adj):
     for i in range(V):
         if visi[i] == 0:
             DFSr(visi,adj,st,i)
-    st.reverse()
     for i in range(V-1,-1,-1):
         print(st[i])
 
