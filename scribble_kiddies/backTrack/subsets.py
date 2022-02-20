@@ -1,6 +1,8 @@
 class subsets:
+    ans = []
     def generate(self,A,ANS,i,n):
         if i == n:
+            self.ans.append(ANS)
             print(ANS)
             return
         ANS.append(A[i])
@@ -10,4 +12,5 @@ class subsets:
 
 A = subsets()
 A.generate([1,2,3],[],0,3)
+print(A.ans)
         
