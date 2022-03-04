@@ -4,7 +4,7 @@ def merge(arr, l, m, r):
     print(lA,rA)
     L = 0
     R = 0
-    i = 0
+    i = l
     n1 = len(lA)
     n2 = len(rA)
     while L < n1 and R < n2:
@@ -35,6 +35,6 @@ def mergeSort(arr, l, r):
         mergeSort(arr,m+1,r)
         merge(arr,l,m,r)
 
-A = [5,3,2]
-mergeSort(A,0,2)
+A = [5,3,2,80,1,25]
+mergeSort(A,0,5)
 print(A)
