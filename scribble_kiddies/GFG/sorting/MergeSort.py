@@ -1,7 +1,6 @@
 def merge(arr, l, m, r):
     lA = arr[l:m+1]
     rA = arr[m+1:r+1]
-    print(lA,rA)
     L = 0
     R = 0
     i = l
