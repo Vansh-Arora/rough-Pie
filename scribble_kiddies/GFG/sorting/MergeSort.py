@@ -23,7 +23,6 @@ def merge(arr, l, m, r):
         i += 1
         R += 1
 
-    print(arr)
         
     # code here
 def mergeSort(arr, l, r):
