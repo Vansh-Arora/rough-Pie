@@ -23,10 +23,7 @@ def merge(arr, l, m, r):
         i += 1
         R += 1
 
-        
-    # code here
 def mergeSort(arr, l, r):
-    #code here
     if r > l:
         m = (l +r)//2
         mergeSort(arr,l,m)
