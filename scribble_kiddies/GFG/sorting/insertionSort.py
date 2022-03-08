@@ -1,3 +1,5 @@
+## Maintain a sorted part 
+# take next coming elements and insert them accordingly in sorted array
 def Sort(A):
     n = len(A)
     for i in range(1,n):
