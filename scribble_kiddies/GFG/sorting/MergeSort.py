@@ -1,3 +1,7 @@
+# Merge Function
+# Given an array with 2 individual sorted components
+## first component: l-m     ## Second Component: (m+1)-r
+
 def merge(arr, l, m, r):
     lA = arr[l:m+1]
     rA = arr[m+1:r+1]
@@ -29,7 +33,7 @@ def mergeSort(arr, l, r):
         mergeSort(arr,l,m)
         mergeSort(arr,m+1,r)
         merge(arr,l,m,r)
-        
+
 if __name__ == "__main__":
     A = [5,3,2,80,1,25]
     mergeSort(A,0,5)
