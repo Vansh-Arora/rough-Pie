@@ -29,6 +29,8 @@ def merge(arr, l, m, r):
         i += 1
         R += 1
 
+## Divide the array till it reaches to size 1
+# then start merging
 def mergeSort(arr, l, r):
     if r > l:
         m = (l +r)//2
