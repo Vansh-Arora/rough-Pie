@@ -3,11 +3,13 @@
 ## first component: l-m     ## Second Component: (m+1)-r
 
 def merge(arr, l, m, r):
+    # Make 2 arrays from these components
     lA = arr[l:m+1]
     rA = arr[m+1:r+1]
+    # Now merge 2 sorted arrays
     L = 0
     R = 0
-    i = l
+    i = l # here i = l as each time main array will be sorted till l(starting point of present array)
     n1 = len(lA)
     n2 = len(rA)
     while L < n1 and R < n2:
