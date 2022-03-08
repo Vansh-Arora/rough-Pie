@@ -1,3 +1,4 @@
+## Select the minimum element and place it at cur position
 def sort(A):
     n = len(A)
     for i in range(n-1):
