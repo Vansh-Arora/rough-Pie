@@ -8,7 +8,7 @@ def sort(A):
         A[i],A[min] = A[min],A[i]
 
 
-
-A = [2,1,4,7,5]
-sort(A)
-print(A)
+if __name__ == "__main__":
+    A = [2,1,4,7,5]
+    sort(A)
+    print(A)
