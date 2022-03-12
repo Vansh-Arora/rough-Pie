@@ -14,6 +14,7 @@ def intersection(A,B):
             print(A[i],end = " ")
             i += 1
             j += 1
+            
 if __name__ == "__main__":
     A = [1,3,5,6,7,8]
     B = [6,6,7,8]
