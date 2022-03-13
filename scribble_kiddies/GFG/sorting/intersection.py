@@ -11,10 +11,10 @@ def intersection(A,B):
         elif A[i] < B[j]:
             i += 1
         else:
-            print(A[i])
+            print(A[i],end = " ")
             i += 1
             j += 1
-
-A = [1,3,5,6,7,8]
-B = [6,6,7,8]
-intersection(A,B)
+if __name__ == "__main__":
+    A = [1,3,5,6,7,8]
+    B = [6,6,7,8]
+    intersection(A,B)
