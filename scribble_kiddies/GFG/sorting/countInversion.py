@@ -36,6 +36,6 @@ def divide(arr,l,r):
     return res
 
 if __name__ == "__main__":
-    A = [5,3,2,80,1,25]
-    divide(A,0,5)
+    A = [2,4,1,3,5]
+    print(divide(A,0,5))
     print(A)
