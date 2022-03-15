@@ -11,12 +11,20 @@ def mergeNcount(arr,l,m,r):
             arr[k] = left[i]
             i += 1
             k += 1
-        elif right[j] < left[i]:
+        else:
             arr[k] = right[j]
             k += 1
             res += (n1 - i)
             j += 1
-
+    while i < n1:
+        arr[k] = left[i]
+        i += 1
+        k += 1
+    while j < n2:
+        arr[k] = right[j]
+        j += 1
+        k += 1
+    return res
 def divide(arr,l,r):
     res = 0
     if l < r:
@@ -25,3 +33,4 @@ def divide(arr,l,r):
         res += divide(arr,m+1,r)
         res += mergeNcount(arr,l,m,r)
     return res
+
