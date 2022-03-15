@@ -4,6 +4,7 @@ def mergeNcount(arr,l,m,r):
     i = 0
     j = 0
     k = l
+    res = 0 
     n1 = len(left)
     n2 = len(right)
     while i < n1 and j < n2:
@@ -34,3 +35,7 @@ def divide(arr,l,r):
         res += mergeNcount(arr,l,m,r)
     return res
 
+if __name__ == "__main__":
+    A = [5,3,2,80,1,25]
+    divide(A,0,5)
+    print(A)
