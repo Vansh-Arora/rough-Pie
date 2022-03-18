@@ -7,5 +7,5 @@ def lomuto(A,l,r):
             A[i],A[j] = A[j],A[i]
     A[j+1],A[p] = A[p],A[j+1]
     print(A)
-
-lomuto([2,3,4,13,1,3,6,5,4,7],0,9)
+if __name__ == "__main__":
+    lomuto([2,3,4,13,1,3,6,5,4,7],0,9)
