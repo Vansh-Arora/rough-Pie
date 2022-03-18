@@ -14,5 +14,5 @@ def hoare(A,l,r):
             return j
         A[i],A[j] = A[j],A[i]
 
-        
-hoare([5,3,8,4,2,7,1,10],0,7)
+if __name__ == "__main__":      
+    hoare([5,3,8,4,2,7,1,10],0,7)
