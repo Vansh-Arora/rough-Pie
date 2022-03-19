@@ -4,11 +4,22 @@
 def lomuto(A,l,r):
     p = r
     j = l-1
-    for i in range(r):
+    for i in range(l,r):
         if A[i] < A[p]:
             j += 1
             A[i],A[j] = A[j],A[i]
     A[j+1],A[p] = A[p],A[j+1]
-    print(A)
+    return j+1
+
+def qSort(A,l,r):
+    print(l,r)
+    if l < r:
+        p = lomuto(A,l,r)
+        print(p)
+        qSort(A,l,p-1)
+        qSort(A,p+1,r)
+
 if __name__ == "__main__":
-    lomuto([2,3,4,13,1,3,6,5,4],0,8)
+    A = [8,4,7,9,3,10,5]
+    qSort(A,0,6)
+    print(A)
