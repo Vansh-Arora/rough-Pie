@@ -10,9 +10,9 @@ def hoare(A,l,r):
         while A[j] > p:
             j -= 1
         if i >= j:
-            print(j)
             return j
         A[i],A[j] = A[j],A[i]
+
 def qSort(A,l,r):
     if l < r:
         p = hoare(A,l,r)
