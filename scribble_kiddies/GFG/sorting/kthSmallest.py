@@ -22,7 +22,6 @@ def find(A,k):
     return -1
 
 if __name__ == "__main__":
-    A = [8,4,7,9,3,10,5]
-    A = [1]
-    ans = find(A,1)
+    A = [8,4,7,9,3,10,5,5,4]
+    ans = find(A,3)
     print(ans)
