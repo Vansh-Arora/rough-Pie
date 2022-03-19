@@ -12,10 +12,8 @@ def lomuto(A,l,r):
     return j+1
 
 def qSort(A,l,r):
-    print(l,r)
     if l < r:
         p = lomuto(A,l,r)
-        print(p)
         qSort(A,l,p-1)
         qSort(A,p+1,r)
 
