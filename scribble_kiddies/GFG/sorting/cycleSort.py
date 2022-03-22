@@ -14,3 +14,8 @@ def sort(A):
                     pos += 1
             item,A[pos] = A[pos],item
 
+
+if  __name__ == "__main__":
+    A =   [123,45,67,8,9,0,65,4,33,657,9]
+    sort(A)
+    print(A)
