@@ -1,6 +1,6 @@
 def sort(A):
     n = len(A)
-    for curr in range(n):
+    for curr in range(n-1):
         item = A[curr]
         pos = curr
         for i in range(curr+1,n):
