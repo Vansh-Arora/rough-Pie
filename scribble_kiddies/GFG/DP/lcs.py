@@ -10,7 +10,7 @@ def lcs(s1,s2,m,n):
 '''
 ## Using DP
 
-## Mempoization
+## Memoization
 m = 4
 n = 3
 S = [[-1 for i in range(n+1)] for j in range(m+1)]
