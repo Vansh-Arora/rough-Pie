@@ -26,5 +26,6 @@ def merge(A):
     for i in range(res+1):
         print(A[i])
 
-arr = [[2,4],[1,3],[8,10],[5,7],[6,9]]
-merge(arr)
+if __name__ == "__main__":
+    arr = [[2,4],[1,3],[8,10],[5,7],[6,9]]
+    merge(arr)
