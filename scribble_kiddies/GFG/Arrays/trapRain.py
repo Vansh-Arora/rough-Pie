@@ -14,7 +14,7 @@ def trap(A):
     
     return ans
 
-
-A = [5,0,6,2,3]
-ans = trap(A)
-print(ans)
+if __name__ == "__main__":
+    A = [5,0,6,2,3]
+    ans = trap(A)
+    print(ans)
