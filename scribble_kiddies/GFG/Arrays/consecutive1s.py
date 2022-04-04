@@ -10,6 +10,7 @@ def get(A):
             count = 0
     return res
 
-A = [0,0,1,1,1,1,0,0,1,1,0,0,1,1,1,0,1]
-ans = get(A)
-print(ans)
+if __name__ == "__main__":
+    A = [0,0,1,1,1,1,0,0,1,1,0,0,1,1,1,0,1]
+    ans = get(A)
+    print(ans)
