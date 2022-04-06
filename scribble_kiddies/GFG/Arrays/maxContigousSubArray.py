@@ -7,5 +7,6 @@ def maxSubArray(A):
         sumYet = max(sumYet,0) # if someYet goes below 0, update sumYet to 0
     return maxi
 
-
-print(maxSubArray([-100,-200,-300,-200,-400,-1800,-1500]))
+if __name__ == "__main__":
+    A = [-100,-200,-300,-200,-400,-1800,-1500]
+    print(maxSubArray(A))
