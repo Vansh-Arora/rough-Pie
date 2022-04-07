@@ -20,4 +20,5 @@ def maxi(A):
         res = max(count,res)
     print(res)
 
-maxi([1,1,1,1,12,25,10,3,7,9])
+if __name__ == "__main__":
+    maxi([1,1,1,1,12,25,10,3,7,9])
