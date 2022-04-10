@@ -2,7 +2,7 @@
 
 class Node:
     # Structure of Node
-    def __init__(self,data):
+    def __init__(self):
         self.left = None
         self.right = None
         self.data = data
