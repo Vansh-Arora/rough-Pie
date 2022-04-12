@@ -1,12 +1,17 @@
 def getSub(A,k):
-    sum = A[0]
-    start = 0
-    for i in range(1,len(A)):
+    sub = {}
+    sum = 0
+    for i in A:
+        sum += i
         if sum == k:
             return True
-        elif sum > K:
-            sum -= A[start]
-            start += 1
-        sum += A[i]
+        if k-i in sub:
+            return True
+        sub[sum] = 0
     return False
+
+
+if __name__ == "__main__":
+    ans = getSub([13,3,-1],13)
+    print(ans)
 
