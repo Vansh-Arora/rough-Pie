@@ -6,4 +6,9 @@ def getDis(A,B):
     for i in B:
         if i in inter:
             inter[i] += 1
-    print(inter)
+    for i in inter:
+        if inter[i] > 0:
+            print(i)
+
+if __name__ == "__main__":
+    getDis([1,2,4,5,6,7,8,1,2,3,4,5,6,7,8],[1,1,2,2,3])
