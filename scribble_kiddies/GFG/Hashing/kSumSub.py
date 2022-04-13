@@ -5,13 +5,13 @@ def getSub(A,k):
         sum += i
         if sum == k:
             return True
-        if k-i in sub:
+        if sum-k in sub:
             return True
         sub[sum] = 0
     return False
 
 
 if __name__ == "__main__":
-    ans = getSub([13,3,-1],13)
+    ans = getSub([1,3,-1,11,2],13)
     print(ans)
 
