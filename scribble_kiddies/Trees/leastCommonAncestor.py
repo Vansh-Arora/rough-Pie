@@ -1,3 +1,4 @@
+# Works only if tree has both nodes present
 def lca(root,n1,n2):
     if root == None:
         return None
