@@ -1,19 +1,20 @@
 class Solution:
-	# @param A : tuple of strings
-	# @return a list of list of integers
-	def anagrams(self, A):
-		dis = {}
-		for i in range(len(A)):
-			temp = 0
-			for j in A[i]:
-				temp += (ord(j)*ord(j))
+    def Anagrams(self, words, n):
+        '''
+        words: list of word
+        n:      no of words
+        return : list of group of anagram {list will be sorted in driver code (not word in grp)}
+        '''
+        
+        #code here
+        dis = {}
+        for i in words:
+            temp = "".join(sorted(i))
 			if temp not in dis:
-				dis[temp] = [i+1]
+				dis[temp] = [i]
 			else:
-				dis[temp].append(i+1)
+				dis[temp].append(i)
 		ans = []
 		for i in dis:
 			ans.append(dis[i])
 		return ans
-
-		
