@@ -1,18 +1,16 @@
 ## Iterative
-def flatten(root):
-    cur = root
-    while cur:
-        if cur.left:
-            temp = cur.right
-            cur.right = cur.left
-            cur.left = None
-            curr = cur
+def flatten(A):
+    root = A
+    while root:
+        if root.left:
+            temp = root.right
+            root.right = root.left
+            root.left = None
+            curr = root
             while curr.right:
                 curr = curr.right
             curr.right = temp
-            cur = cur.right
-        else:
-            cur = cur.right
+        root = root.right
     return root
 
 ## Recursively
