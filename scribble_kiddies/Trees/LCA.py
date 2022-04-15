@@ -6,11 +6,7 @@
 #		self.right = None
 
 class Solution:
-	# @param A : root node of tree
-	# @param B : integer
-	# @param C : integer
-	# @return an integer
-	def lca(self, A, B, C):
+    def lca(self, A, B, C):
         pathB = []
         cur = A
         flag = 0
