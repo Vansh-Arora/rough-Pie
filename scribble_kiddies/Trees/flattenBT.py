@@ -14,3 +14,18 @@ def flatten(root):
         else:
             cur = cur.right
     return root
+
+## Recursively
+'''
+def flatten(root):
+    if root == None:
+        return
+    right = root.right
+    root.right = root.left
+    root.left = None
+    curr = root
+    while curr.right:
+        curr = curr.right
+    curr.right = right
+    flatten(root.right)
+'''
