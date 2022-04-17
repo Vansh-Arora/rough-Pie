@@ -1,1 +1,2 @@
-M = [[-1 for i in range(A)] for i in range(A)]
+M = [[-1 for i in range(3)] for i in range(3)]
+print(M)
