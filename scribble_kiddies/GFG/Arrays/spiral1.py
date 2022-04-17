@@ -1,0 +1,1 @@
+M = [[-1 for i in range(A)] for i in range(A)]
