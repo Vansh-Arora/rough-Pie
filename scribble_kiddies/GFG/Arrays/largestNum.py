@@ -2,8 +2,6 @@
 def smaller(A,B):
     A = str(A)
     B = str(B)
-    n = len(A)
-    m = len(B)
     a = A + B
     b = B + a
     if a > b:
