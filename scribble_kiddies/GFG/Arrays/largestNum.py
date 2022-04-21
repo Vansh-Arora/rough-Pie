@@ -3,7 +3,7 @@ def smaller(A,B):
     A = str(A)
     B = str(B)
     a = A + B
-    b = B + a
+    b = B + A
     if a > b:
         return 0
     else:
