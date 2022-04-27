@@ -1,23 +1,19 @@
-class Solution:
-    # @param A : string
-    # @return a strings
-    def longestPalindrome(self, A):
-        def check(A,st,en):
-            L,R=st,en
-            while L>=0 and R<len(A) and A[L]==A[R]:
-                L -= 1
-                R += 1
-            return R-L-1
-        start = 0
-        end = 0
-        for i in range(len(A)):
-            len1 = check(A,i,i)
-            len2 = check(A,i,i+1)
-            len_ = max(len1,len2)
-            if len_ > end-start:
-                #print(end,start,end-start,"Before")
-                start = i - (((len_-1)//2))
-                end = i + len_//2+1
-                #print(start,end,A[start:end],len_)
-            #print(start,end)
-        return A[start:end]
+def longestPalindrome(self,A):
+    def check(A,l,r):
+        while l >= 0 and r < len(A) and A[l] == A[r]:
+            l -= 1
+            r += 1
+
+        return r-l - 1
+    st = 0
+    en = 0
+    for i in range(len(A)):
+        l1 = check(A,i,i)
+        l2 = check(A,i,i+1)
+        l = max(l1,l2)
+        if l > (en - st)+1:
+            st = i - ((l-1)//2)
+            en = i + (l//2)
+    return A[st:en+1]
+
+print(longestPalindrome("abb"))
