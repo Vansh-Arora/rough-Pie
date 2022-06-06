@@ -212,12 +212,13 @@ def traverse2(root):
         if cur == None:
             q.append(None)
             end += 1
-        if cur.left:
-            q.append(cur.left)
-            end += 1
-        if cur.right:
-            q.append(cur.right)
-            end += 1
+        else:
+            if cur.left:
+                q.append(cur.left)
+                end += 1
+            if cur.right:
+                q.append(cur.right)
+                end += 1
     print(q)
             
 
