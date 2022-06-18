@@ -3,7 +3,7 @@ def DFShelper(V,adj,node,ans):
     ans.append(node)
     for i in adj[node]:
         if V[i] == 0:
-            DFShelper(V,adj,i)
+            DFShelper(V,adj,i,ans)
 
 def DFS(adj,V):
     visi = [0 for i in range(V)]
@@ -14,9 +14,10 @@ def DFS(adj,V):
             count += 1
             DFShelper(visi,adj,i,ans)
     print("Connected Components = {}".format(count))
-
+    return ans
 
 
 # [[1, 2], [0, 3, 4, 5, 6], [0, 6], [1], [1], [1], [1, 2]]
 adjList = [[1, 2], [0, 3, 4, 5, 6], [0, 6], [1], [1], [1], [1, 2], [8, 9], [7], [7], [11], [10]]
-DFS(adjList,12)
+print(DFS(adjList,12))
+
