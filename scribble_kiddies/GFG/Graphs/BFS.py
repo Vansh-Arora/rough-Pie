@@ -1,3 +1,4 @@
+# It works only for connected graph.
 def BFS(adj,V):
     visi = [0 for i in range(V)]
     q = []
